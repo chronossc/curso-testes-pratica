@@ -4,6 +4,8 @@ class Identifier:
         if identifier:
             achar = identifier[0]
             valid_id = self.valid_s(achar)
+        if not identifier:
+            raise ValueError("Invalid identifier")
         if len(identifier) > 1:
             achar = identifier[1]
             i = 1
